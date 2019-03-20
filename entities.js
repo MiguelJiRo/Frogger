@@ -121,7 +121,7 @@ var Frog = function()
     var collisionTroncos = this.board.collide(this,OBJECT_TRANS);
     var collision = this.board.collide(this,OBJECT_ENEMY);
     var collisionFin = this.board.collide(this,OBJECT_HOME);
-    console.log("%%%%%% home colision : " + collisionFin);
+    //console.log("%%%%%% home colision : " + collisionFin);
     //console.log("%%%%%% trans colision : " + collisionTroncos);
     //console.log("%%%%%% enemy colision : " + collision);
     // si la rana no colisiona con los troncos, prueba con la colision normal
