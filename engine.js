@@ -178,7 +178,7 @@ var TitleScreen = function TitleScreen(title,subtitle,callback) {
     ctx.fillRect(0, 0, Game.width, Game.height);
     var logoFrogger = new Image(263,167);
     logoFrogger.src = 'images/sprites.png';
-    ctx.drawImage(logoFrogger, 7, 395, 263, 167, 150, 120, 260, 160);
+    ctx.drawImage(logoFrogger, 7, 395, 265, 170, 160, 120, 250, 150);
     ctx.fillStyle = "#ffffff";
     ctx.textAlign = "center";
     ctx.font = "bold 40px bangers";
