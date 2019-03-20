@@ -120,6 +120,8 @@ var Frog = function()
     // COLISIONES 
     var collisionTroncos = this.board.collide(this,OBJECT_TRANS);
     var collision = this.board.collide(this,OBJECT_ENEMY);
+    var collisionFin = this.board.collide(this,OBJECT_HOME);
+    console.log("%%%%%% home colision : " + collisionFin);
     //console.log("%%%%%% trans colision : " + collisionTroncos);
     //console.log("%%%%%% enemy colision : " + collision);
     // si la rana no colisiona con los troncos, prueba con la colision normal
@@ -139,12 +141,10 @@ var Frog = function()
         setTimeout(loseGame, 600);
         //loseGame();
       }
-    }
-    var collisionFin = this.board.collide(this,OBJECT_HOME);
-    console.log("%%%%%% home colision : " + collisionFin);
-    if(collisionFin){
+    }   
+    else if(collisionFin){
       //exito = true;
-      setTimeout(winGame, 600);
+      setTimeout(winGame, 200);
       //winGame();
     }
   }
@@ -374,7 +374,7 @@ var Spawner = function (){
         vehiculos[i].tiempoACC += vehiculos[i].tiempoCICLO;        
         var modelo = coches[vehiculos[i].sprite];        
         //console.log("&&&&& modelo1 : " + modelo);        
-        this.board.addFront(new Car(modelo));        
+        //this.board.addFront(new Car(modelo));        
         //console.log("&&&&& 6");
       }
     }
@@ -420,7 +420,7 @@ var Home = function(){
   this.x = 0;
   this.y = 0;
   this.w = 550;
-  this.h = 60;
+  this.h = 70;
   this.step = function(dt){};
   this.draw = function(ctx){};
 }

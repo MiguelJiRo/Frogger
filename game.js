@@ -9,7 +9,8 @@ var playGame = function()
 {
 	
  	Game.setBoard(0,new Fondo());
- 	var board = new GameBoard();    
+ 	var board = new GameBoard();
+  board.add(new Home());
   board.add(new Water());
   board.add(new Frog());
   board.add(new Spawner());   
