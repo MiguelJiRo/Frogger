@@ -374,7 +374,7 @@ var Spawner = function (){
         vehiculos[i].tiempoACC += vehiculos[i].tiempoCICLO;        
         var modelo = coches[vehiculos[i].sprite];        
         //console.log("&&&&& modelo1 : " + modelo);        
-        //this.board.addFront(new Car(modelo));        
+        this.board.addFront(new Car(modelo));        
         //console.log("&&&&& 6");
       }
     }
